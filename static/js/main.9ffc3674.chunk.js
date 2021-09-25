@@ -1,0 +1,2 @@
+(this.webpackJsonpbcrypt=this.webpackJsonpbcrypt||[]).push([[0],{9:function(e,t,c){"use strict";c.r(t);var n=c(3),r=c.n(n),s=c(0);function p(){return Object(s.jsx)("div",{className:"App",children:"hello"})}r.a.render(Object(s.jsx)(p,{}),document.getElementById("root"))}},[[9,1,2]]]);
+//# sourceMappingURL=main.9ffc3674.chunk.js.map
