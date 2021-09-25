@@ -3,50 +3,42 @@ import styled from "styled-components";
 import { TextBig, TextCenter } from "../styled/styled";
 import { useInput } from "../hooks/useInput";
 import { Container } from "../styled/styled";
+import Alert from "./Alert";
 const bcryptjs = require("bcryptjs");
 
 const Decrypt = () => {
   const [hash, hashInput] = useInput({
     type: "text",
     placeholder: "Hash to check",
+    propVal: "$2a$10$VEfKDTkTlY0/RtmG5nxHT.GjjB4H5.FF5FfivKkGbQIJOMuZrCENi",
   });
   const [str, strInput] = useInput({
     type: "text",
     placeholder: "String to check again",
+    propVal: "hello world",
   });
   const [doing, setDoing] = useState(false);
+  const [result, setResult] = useState(true);
 
   function eventDecrypt(str, hash) {
     setDoing(true);
-    bcryptjs.compare(str, hash).then((res) => {
+    bcryptjs.compare(str, hash).then((newResult) => {
       setDoing(false);
-      alert(res);
+      setResult(newResult);
     });
   }
 
   return (
     <Container>
       <TextBig>Decrypt</TextBig>
-      {hashInput}
-      <br />
       {strInput}
+      <br />
+      {hashInput}
       <div className="d-flex justify-content-center">
         <Button onClick={() => eventDecrypt(str, hash)}>Click me</Button>
       </div>
       {doing && <TextCenter>Decrypting..............</TextCenter>}
-      <div
-        className="alert alert-warning alert-dismissible fade show"
-        role="alert"
-      >
-        <strong>Holy guacamole!</strong> You should check in on some of those
-        fields below.
-        <button
-          type="button"
-          className="btn-close"
-          data-bs-dismiss="alert"
-          aria-label="Close"
-        ></button>
-      </div>
+      <Alert content={result} result={result} />
     </Container>
   );
 };

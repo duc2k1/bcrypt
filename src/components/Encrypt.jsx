@@ -3,18 +3,26 @@ import styled from "styled-components";
 import { TextBig, TextCenter } from "../styled/styled";
 import { useInput } from "../hooks/useInput";
 import { Container } from "../styled/styled";
+import Alert from "./Alert";
 const bcryptjs = require("bcryptjs");
 
 const Encrypt = () => {
-  const [str, strInput] = useInput({ type: "text", placeholder: "String" });
+  const [str, strInput] = useInput({
+    type: "text",
+    placeholder: "String",
+    propVal: "hello world",
+  });
   const [salt, setSalt] = useState(0);
   const [doing, setDoing] = useState(false);
+  const [hash, setHash] = useState(
+    "$2a$10$VEfKDTkTlY0/RtmG5nxHT.GjjB4H5.FF5FfivKkGbQIJOMuZrCENi"
+  );
 
   function eventEncrypt(str, saltRounds) {
     setDoing(true);
-    bcryptjs.hash(str, saltRounds).then((err, hash) => {
+    bcryptjs.hash(str, saltRounds).then((err, newHash) => {
       setDoing(false);
-      alert(err || hash);
+      setHash(err || newHash);
     });
   }
 
@@ -53,19 +61,7 @@ const Encrypt = () => {
         <Button onClick={() => eventEncrypt(str, salt)}>Click me</Button>
       </div>
       {doing && <TextCenter>Encrypting..............</TextCenter>}
-      <div
-        className="mt-2 alert alert-warning alert-dismissible fade show"
-        role="alert"
-      >
-        <strong>Holy guacamole!</strong> You should check in on some of those
-        fields below.
-        <button
-          type="button"
-          className="btn-close"
-          data-bs-dismiss="alert"
-          aria-label="Close"
-        ></button>
-      </div>
+      <Alert content={hash} />
     </Container>
   );
 };
