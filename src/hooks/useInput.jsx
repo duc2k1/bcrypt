@@ -1,15 +1,14 @@
 import { useState } from "react";
 
-export function useInput({ type, placeholder, propVal }) {
+export function useInput({ placeholder, propVal }) {
   const [value, setValue] = useState(propVal);
   const input = (
-    <input
-      value={value}
-      onChange={(e) => setValue(e.target.value)}
-      type={type}
-      maxLength="100"
-      style={{ marginBottom: "10px", width: "100%" }}
+    <textarea
+      className="text-center"
       placeholder={placeholder}
+      style={{ marginBottom: "10px", width: "100%" }}
+      onChange={(e) => setValue(e.target.value)}
+      value={value}
     />
   );
   return [value, input];

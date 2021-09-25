@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { TextBig, TextCenter } from "../styled/styled";
+import { TextBigCenter, TextCenter, Button } from "../styled/styled";
 import { useInput } from "../hooks/useInput";
 import { Container } from "../styled/styled";
 import Alert from "./Alert";
@@ -8,7 +8,6 @@ const bcryptjs = require("bcryptjs");
 
 const Encrypt = () => {
   const [str, strInput] = useInput({
-    type: "text",
     placeholder: "String",
     propVal: "hello world",
   });
@@ -28,8 +27,9 @@ const Encrypt = () => {
 
   return (
     <Container>
-      <TextBig>Encrypt</TextBig>
+      <TextBigCenter>Encrypt</TextBigCenter>
       {strInput}
+      <TextCenter>Salt Rounds</TextCenter>
       <div className="d-flex justify-content-center">
         <SaltRounds>
           <Button
@@ -66,22 +66,15 @@ const Encrypt = () => {
   );
 };
 
-const Button = styled.button`
-  cursor: pointer;
-  text-align: center;
-  border: none;
-  border-radius: 5px;
-`;
-
 const Salt = styled.div`
   color: black;
-  margin: 10px;
+  margin-inline: 5px;
 `;
 
 const SaltRounds = styled.div`
   display: flex;
   justify-content: space-around;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   width: 100px;
 `;
 

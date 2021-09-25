@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
-import { TextBig, TextCenter } from "../styled/styled";
+import { TextBigCenter, TextCenter, Button } from "../styled/styled";
 import { useInput } from "../hooks/useInput";
 import { Container } from "../styled/styled";
 import Alert from "./Alert";
@@ -8,12 +7,10 @@ const bcryptjs = require("bcryptjs");
 
 const Decrypt = () => {
   const [hash, hashInput] = useInput({
-    type: "text",
     placeholder: "Hash to check",
     propVal: "$2a$10$VEfKDTkTlY0/RtmG5nxHT.GjjB4H5.FF5FfivKkGbQIJOMuZrCENi",
   });
   const [str, strInput] = useInput({
-    type: "text",
     placeholder: "String to check again",
     propVal: "hello world",
   });
@@ -30,7 +27,7 @@ const Decrypt = () => {
 
   return (
     <Container>
-      <TextBig>Decrypt</TextBig>
+      <TextBigCenter>Decrypt</TextBigCenter>
       {strInput}
       <br />
       {hashInput}
@@ -42,12 +39,5 @@ const Decrypt = () => {
     </Container>
   );
 };
-
-const Button = styled.button`
-  cursor: pointer;
-  text-align: center;
-  border: none;
-  border-radius: 5px;
-`;
 
 export default Decrypt;

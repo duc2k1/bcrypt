@@ -2,9 +2,7 @@ export default function Alert({ content, result = true }) {
   return (
     <div
       className={
-        "mt-2 alert  alert-" +
-        (result ? "success" : "danger") +
-        " alert-dismissible fade show"
+        "mt-2 alert  alert-" + (result ? "success" : "danger") + " text-center"
       }
       role="alert"
       style={{ wordWrap: "break-word" }}
