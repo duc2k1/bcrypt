@@ -1,0 +1,5 @@
+- styled: những styled hay sử dụng
+- components: các phần tử
+- props-type: kiểm tra kiểu dữ liệu
+- styled-components: package build style sử dụng cú pháp js
+- gh-pages: tạo branch gh-pages trên repo và tự động push folder build khi chạy lệnh gh-pages -d build
