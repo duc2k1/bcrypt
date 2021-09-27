@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.js": "/bcrypt/static/js/main.a7e24620.chunk.js",
-    "main.js.map": "/bcrypt/static/js/main.a7e24620.chunk.js.map",
+    "main.css": "/bcrypt/static/css/main.78e2e2d3.chunk.css",
+    "main.js": "/bcrypt/static/js/main.de939f59.chunk.js",
+    "main.js.map": "/bcrypt/static/js/main.de939f59.chunk.js.map",
     "runtime-main.js": "/bcrypt/static/js/runtime-main.d78f070f.js",
     "runtime-main.js.map": "/bcrypt/static/js/runtime-main.d78f070f.js.map",
     "static/js/2.e3648669.chunk.js": "/bcrypt/static/js/2.e3648669.chunk.js",
     "static/js/2.e3648669.chunk.js.map": "/bcrypt/static/js/2.e3648669.chunk.js.map",
     "index.html": "/bcrypt/index.html",
+    "static/css/main.78e2e2d3.chunk.css.map": "/bcrypt/static/css/main.78e2e2d3.chunk.css.map",
     "static/js/2.e3648669.chunk.js.LICENSE.txt": "/bcrypt/static/js/2.e3648669.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d78f070f.js",
     "static/js/2.e3648669.chunk.js",
-    "static/js/main.a7e24620.chunk.js"
+    "static/css/main.78e2e2d3.chunk.css",
+    "static/js/main.de939f59.chunk.js"
   ]
 }
