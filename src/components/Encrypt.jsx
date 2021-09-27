@@ -41,7 +41,7 @@ const Encrypt = () => {
               }
             }}
           >
-            Prev
+            ᐊ
           </Button>
           <Salt>{salt}</Salt>
           <Button
@@ -53,7 +53,7 @@ const Encrypt = () => {
               }
             }}
           >
-            Next
+            ᐅ
           </Button>
         </SaltRounds>
       </div>
