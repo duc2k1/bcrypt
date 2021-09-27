@@ -7,11 +7,11 @@ const bcryptjs = require("bcryptjs");
 
 const Decrypt = () => {
   const [hash, hashInput] = useInput({
-    placeholder: "Hash to check",
+    placeholder: "Hash to check (Max length = 100)",
     propVal: "$2a$10$VEfKDTkTlY0/RtmG5nxHT.GjjB4H5.FF5FfivKkGbQIJOMuZrCENi",
   });
   const [str, strInput] = useInput({
-    placeholder: "String to check again",
+    placeholder: "String to check again (Max length = 100)",
     propVal: "hello world",
   });
   const [doing, setDoing] = useState(false);

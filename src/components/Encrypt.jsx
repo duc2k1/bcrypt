@@ -8,7 +8,7 @@ const bcryptjs = require("bcryptjs");
 
 const Encrypt = () => {
   const [str, strInput] = useInput({
-    placeholder: "String",
+    placeholder: "String (Max length = 100)",
     propVal: "hello world",
   });
   const [salt, setSalt] = useState(0);
