@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/bcrypt/static/css/main.78e2e2d3.chunk.css",
-    "main.js": "/bcrypt/static/js/main.be7020c8.chunk.js",
-    "main.js.map": "/bcrypt/static/js/main.be7020c8.chunk.js.map",
+    "main.js": "/bcrypt/static/js/main.73f1c6a4.chunk.js",
+    "main.js.map": "/bcrypt/static/js/main.73f1c6a4.chunk.js.map",
     "runtime-main.js": "/bcrypt/static/js/runtime-main.d78f070f.js",
     "runtime-main.js.map": "/bcrypt/static/js/runtime-main.d78f070f.js.map",
     "static/js/2.e3648669.chunk.js": "/bcrypt/static/js/2.e3648669.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.d78f070f.js",
     "static/js/2.e3648669.chunk.js",
     "static/css/main.78e2e2d3.chunk.css",
-    "static/js/main.be7020c8.chunk.js"
+    "static/js/main.73f1c6a4.chunk.js"
   ]
 }
